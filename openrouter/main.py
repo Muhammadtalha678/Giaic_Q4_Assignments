@@ -67,7 +67,7 @@ def ask_llm(query:str,model_name:str):
           result =  response.json()
           if 'choices' in result:
             messages.append({
-                "role": "model",
+                "role": "assistant",
                 "content": result['choices'][0]['message']['content']
             })
             # print(messages)
